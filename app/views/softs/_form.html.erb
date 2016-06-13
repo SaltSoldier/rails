@@ -1,0 +1,33 @@
+<%= form_for(@soft) do |f| %>
+  <% if @soft.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@soft.errors.count, "error") %> prohibited this soft from being saved:</h2>
+
+      <ul>
+      <% @soft.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :maker %><br>
+    <%= f.text_field :maker %>
+  </div>
+  <div class="field">
+    <%= f.label :hard %><br>
+    <%= f.text_field :hard %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
