@@ -1,6 +1,6 @@
-<h1>Editing Product</h1>
+<h1>商品詳細編集</h1>
 
-<%= render 'form' %>
+<%= render partial: 'form', locals: { button: '編集' } %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= link_to '商品詳細へ', @product %> |
+<%= link_to '商品一覧へ', products_path %>
